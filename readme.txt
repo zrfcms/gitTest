@@ -125,3 +125,9 @@ git config --global http.sslVerify "false"
 ipconfig /flushdns
 git push origin main
 push check5
+
+git config --global --unset https.proxy
+ipconfig /flushdns
+git config --global http.sslVerify "false"
+git push origin main
+push check6
