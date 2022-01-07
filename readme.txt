@@ -166,6 +166,8 @@ git config --global http.sslVerify "false"
 git config --global --unset https.proxy
 git push origin main
 
+git pull
+git commit -am "dell1080 commit"
 
 
 
