@@ -164,8 +164,7 @@ git config --global --unset https.proxy
 ipconfig /flushdns
 git config --global http.sslVerify "false"
 git config --global --unset https.proxy
-git push origin master
-
+git push origin main
 
 
 
