@@ -151,6 +151,12 @@ git config --global http.sslVerify "false"
 git config --global --unset https.proxy
 git push origin main
 
+git commit -am "push check10"
+git config --global --unset https.proxy
+ipconfig /flushdns
+git config --global http.sslVerify "false"
+git config --global --unset https.proxy
+git push origin main
 
 
 
