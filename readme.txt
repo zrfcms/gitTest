@@ -10,6 +10,7 @@ git modify readme.txt 2
 要随时掌握工作区的状态，使用git status命令。
 如果git status告诉你有文件被修改过，用git diff可以查看修改内容。
 
+git log --pretty=oneline
 HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。
 穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。
 要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
@@ -32,3 +33,26 @@ no changes added to commit (use "git add" and/or "git commit -a")
 场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。
 
 命令git rm用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容。
+
+
+第1步：创建SSH Key
+看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有
+$ ssh-keygen -t rsa -C "youremail@example.com"
+你需要把邮件地址换成你自己的邮件地址，然后一路回车，使用默认值即可，由于这个Key也不是用于军事目的，所以也无需设置密码。
+
+
+
+
+…or create a new repository on the command line
+echo "# gitTest" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/zrfcms/gitTest.git
+git push -u origin main
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/zrfcms/gitTest.git
+git branch -M main
+git push -u origin main
