@@ -95,9 +95,9 @@ ipconfig /flushdns
 Failed to connect to github.com port 443 after 21091 ms: Timed out
 git config --global --unset https.proxy
 
+git config --global --unset https.proxy
 git config --global http.sslVerify "false"
 ipconfig /flushdns
-git config --global --unset https.proxy
 git push origin main
 
 删除远程库
@@ -119,3 +119,9 @@ push check1
 push check2
 push check3
 push check4
+
+git config --global --unset https.proxy
+git config --global http.sslVerify "false"
+ipconfig /flushdns
+git push origin main
+push check5
