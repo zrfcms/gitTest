@@ -159,8 +159,12 @@ git config --global --unset https.proxy
 git push origin main
 
 
-
-
+git commit -am "xiaomi git push origin master"
+git config --global --unset https.proxy
+ipconfig /flushdns
+git config --global http.sslVerify "false"
+git config --global --unset https.proxy
+git push origin master
 
 
 
