@@ -160,6 +160,7 @@ git push origin main
 
 
 git commit -am "xiaomi git push origin master"
+git remote add origin https://github.com/zrfcms/gitTest.git
 git config --global --unset https.proxy
 ipconfig /flushdns
 git config --global http.sslVerify "false"
