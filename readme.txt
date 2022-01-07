@@ -96,8 +96,8 @@ Failed to connect to github.com port 443 after 21091 ms: Timed out
 git config --global --unset https.proxy
 
 git config --global http.sslVerify "false"
-git config --global --unset https.proxy
 ipconfig /flushdns
+git config --global --unset https.proxy
 git push origin main
 
 删除远程库
@@ -118,3 +118,4 @@ git clone git@github.com:zrfcms/gitTest.git
 push check1
 push check2
 push check3
+push check4
