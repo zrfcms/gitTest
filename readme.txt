@@ -195,5 +195,3 @@ git push origin main
 
 git pull
 git commit -am "dell1080 commit2"
-git commit -am "dell1080 commit3"
-git push origin main
