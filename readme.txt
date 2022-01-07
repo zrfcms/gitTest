@@ -94,6 +94,9 @@ Failed to connect to github.com port 443 after 21091 ms: Timed out
 git config --global --unset https.proxy
 
 
+git config --global http.sslVerify "false"
+
+
 删除远程库
 如果添加的时候地址写错了，或者就是想删除远程库，可以用git remote rm <name>命令。使用前，建议先用git remote -v查看远程库信息：
 $ git remote -v
@@ -106,3 +109,6 @@ $ git remote rm origin
 
 要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；
 关联一个远程库时必须给远程库指定一个名字，origin是默认习惯命名；关联后，使用命令git push -u origin master第一次推送master分支的所有内容；此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
+
+
+git clone git@github.com:zrfcms/gitTest.git
