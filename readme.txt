@@ -188,6 +188,12 @@ Port 443
 做完以上步骤后就可以用git bash更新代码了；
 
 git pull
+git commit -am "xiaomi commit2"
+git commit -am "xiaomi commit3"
+git push origin main
+
+
+git pull
 git commit -am "dell1080 commit2"
 git commit -am "dell1080 commit3"
 git push origin main
