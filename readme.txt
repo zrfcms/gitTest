@@ -187,4 +187,5 @@ Port 443
 
 做完以上步骤后就可以用git bash更新代码了；
 
-
+git pull
+git commit -am "dell1080 commit2"
