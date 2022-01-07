@@ -92,3 +92,17 @@ ipconfig /flushdns
 
 Failed to connect to github.com port 443 after 21091 ms: Timed out
 git config --global --unset https.proxy
+
+
+删除远程库
+如果添加的时候地址写错了，或者就是想删除远程库，可以用git remote rm <name>命令。使用前，建议先用git remote -v查看远程库信息：
+$ git remote -v
+origin  git@github.com:michaelliao/learn-git.git (fetch)
+origin  git@github.com:michaelliao/learn-git.git (push)
+
+然后，根据名字删除，比如删除origin：
+$ git remote rm origin
+此处的“删除”其实是解除了本地和远程的绑定关系，并不是物理上删除了远程库。远程库本身并没有任何改动。要真正删除远程库，需要登录到GitHub，在后台页面找到删除按钮再删除。
+
+要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；
+关联一个远程库时必须给远程库指定一个名字，origin是默认习惯命名；关联后，使用命令git push -u origin master第一次推送master分支的所有内容；此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
