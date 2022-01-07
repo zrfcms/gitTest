@@ -57,6 +57,34 @@ git remote add origin https://github.com/zrfcms/gitTest.git
 git branch -M main
 git push -u origin main
 
+OpenSSL SSL_read: Connection was reset, errno 10054
+Solution1: （原因）自己配置的用户名，邮箱可能输入错误了。
+查看用户名，邮箱
+
+git config user.name
+git config user.email</code>
+修改，用户名，邮箱
+
+git config --global user.name "xxx"
+git config --global user.email "xxx"
+移除仓库，重新添加
+
+git remote rm origin
+git remote add origin https://github.com/XXX
+Solution2: 修改解除SSL认证。
+在Git Bash中输入以下命令：
+
+git config --global http.sslVerify "false"
+Solution3: （原因）文件太大了。
+改为500MB，在Git Bash中输入以下命令：
+
+git config http.postBuffer 5242880003
+Solution4: （原因）更新DNS缓存。
+在cmd中输入以下命令：
+
+ipconfig /flushdns
+
+
 由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令
 从现在起，只要本地作了提交，就可以通过命令
 git push origin master
