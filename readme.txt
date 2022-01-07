@@ -56,3 +56,7 @@ git push -u origin main
 git remote add origin https://github.com/zrfcms/gitTest.git
 git branch -M main
 git push -u origin main
+
+由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令
+从现在起，只要本地作了提交，就可以通过命令
+git push origin master
