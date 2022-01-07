@@ -171,4 +171,20 @@ git pull
 git commit -am "dell1080 commit"
 
 
+问题：Failed to connect to github.com port 443: Timed out
+这这个问题的原因可能是 ssh的公钥没有配置好；
+
+修改 C:\code\Git\etc\ssh\ssh_config的配置即可
+
+Host github.com
+User git
+Hostname ssh.github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_ed25519
+Port 443
+
+其中的 IdentityFile ~/.ssh/id_ed25519 需要换成自己的公钥路径；
+
+做完以上步骤后就可以用git bash更新代码了；
+
 
