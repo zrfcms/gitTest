@@ -1,6 +1,8 @@
 git ls-files -v -o#显示未跟踪的文件
-
 git ls-files -v#显示跟踪的文件
+
+git config user.name 
+git config user.email 
 
 git add readme.txt
 git modify readme.txt 1
@@ -93,9 +95,9 @@ ipconfig /flushdns
 Failed to connect to github.com port 443 after 21091 ms: Timed out
 git config --global --unset https.proxy
 
-
+ipconfig /flushdns
 git config --global http.sslVerify "false"
-
+git push origin main
 
 删除远程库
 如果添加的时候地址写错了，或者就是想删除远程库，可以用git remote rm <name>命令。使用前，建议先用git remote -v查看远程库信息：
@@ -112,3 +114,4 @@ $ git remote rm origin
 
 
 git clone git@github.com:zrfcms/gitTest.git
+push check1
