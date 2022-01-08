@@ -206,3 +206,19 @@ ssh-keygen -t rsa -C
 ssh-keygen -t rsa -C "zrfcms@buaa.edu.com"
 ssh-keygen -t rsa -C "zrfcms@gmail.com"
 password
+
+PS C:\file\python\gitTest> git remote rm origin
+PS C:\file\python\gitTest> git remote -v
+PS C:\file\python\gitTest> git remote add gitee https://gitee.com/zrfcms/git-test.git
+PS C:\file\python\gitTest> git remote -v
+gitee   https://gitee.com/zrfcms/git-test.git (fetch)
+gitee   https://gitee.com/zrfcms/git-test.git (push)
+PS C:\file\python\gitTest> git remote add github https://github.com/zrfcms/gitTest.git
+PS C:\file\python\gitTest> git remote -v
+gitee   https://gitee.com/zrfcms/git-test.git (fetch)
+gitee   https://gitee.com/zrfcms/git-test.git (push)
+github  https://github.com/zrfcms/gitTest.git (fetch)
+github  https://github.com/zrfcms/gitTest.git (push)
+git commit -am "double remote"
+git push gitee main
+git push github main
