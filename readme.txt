@@ -228,3 +228,6 @@ git branch
 git checkout main
 git branch -d master
 git commit -am "xiaomi push main"
+
+git pull gitee main
+git commit -am "dell1080 push main"
