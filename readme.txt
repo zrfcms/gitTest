@@ -222,3 +222,9 @@ github  https://github.com/zrfcms/gitTest.git (push)
 git commit -am "double remote"
 git push gitee main
 git push github main
+
+
+git branch
+git checkout main
+git branch -d master
+git commit -am "xiaomi push main"
