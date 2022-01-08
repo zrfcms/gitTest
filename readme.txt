@@ -200,3 +200,8 @@ git push origin main
 
 empty ssh
 empty ssh2
+
+ssh-keygen -t rsa -C
+
+ssh-keygen -t rsa -C "zrfcms@buaa.edu.com"
+ssh-keygen -t rsa -C "zrfcms@gmail.com"
