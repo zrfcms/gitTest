@@ -205,3 +205,4 @@ ssh-keygen -t rsa -C
 
 ssh-keygen -t rsa -C "zrfcms@buaa.edu.com"
 ssh-keygen -t rsa -C "zrfcms@gmail.com"
+password
